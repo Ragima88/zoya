@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+@import "../../styles/colors";
+
+.navigation {
+  @include flex(row, center, center, auto);
+
+  &-link {
+    @include flex(row, center, center, auto);
+    padding: 25px 10px;
+    color: #1b1b1b;
+    font-family: Montserrat;
+    font-size: 11px;
+    line-height: 1.81em;
+    font-weight: 500;
+    margin-right: 30px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: border 0.3s ease;
+    &:hover {
+      border-bottom: 1px solid black;
+    }
+  }
+}

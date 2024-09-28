@@ -3,8 +3,9 @@
 @import "./colors";
 
 @font-face {
-  font-family: "Varela Round";
-  src: url("../assets/fonts/VarelaRound-Regular.ttf") format("truetype");
+  font-family: "Cormorant Garamond";
+  src: url("../assets/fonts/Cormorant_Garamond/CormorantGaramond-Regular.ttf")
+    format("truetype");
   font-weight: 400;
 }
 @font-face {
@@ -15,7 +16,7 @@
 
 html,
 body {
-  font-family: "Varela Round", sans-serif;
+  font-family: "Montserrat", sans-serif;
   height: 100%;
   color: $textColor;
 }
