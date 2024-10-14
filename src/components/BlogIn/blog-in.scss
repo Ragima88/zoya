@@ -1,0 +1,87 @@
+@import "../../styles/mixins";
+
+.inspiration-blog {
+  @include flex(column, center, flex-start);
+  padding-left: 35px;
+  .inspiration {
+    @include flex(row, center, center, auto);
+    position: relative;
+    margin-bottom: 5px;
+    &::before,
+    &::after {
+      content: "";
+      width: 30px;
+      height: 1px;
+      margin: 0 20px;
+      display: block;
+      background-color: #eee6e2;
+    }
+    &-name {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #cfac9f;
+      text-align: center;
+    }
+  }
+  .inspiration-title {
+    font-family: "Cormorant Garamond";
+    font-size: 53px;
+    line-height: 1.08em;
+    font-weight: 500;
+    color: #1b1b1b;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .inspiration-desc {
+    @include flex(row, center, center);
+    margin-bottom: 40px;
+    .inspiration-date {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ababab;
+      margin-right: 10px;
+    }
+    div {
+      width: 1px;
+      height: 11px;
+      background-color: #eee6e2;
+      margin-right: 10px;
+    }
+    .inspiration-author {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ababab;
+    }
+  }
+  .inspiration-img {
+    width: 805px;
+    margin-bottom: 30px;
+    img {
+      width: 100%;
+    }
+  }
+  .inspiration-content {
+    font-family: "Cormorant Garamond";
+    font-size: 19px;
+    line-height: 1.48em;
+    color: #616161;
+    font-weight: 400;
+    margin-bottom: 50px;
+  }
+  .button-div {
+    @include flex(row, center, space-between);
+    margin-bottom: 20px;
+  }
+}

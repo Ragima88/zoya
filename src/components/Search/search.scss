@@ -10,7 +10,7 @@
       width: 100%;
     }
   }
-  input {
+  .search-input {
     font-family: Montserrat;
     font-size: 11px;
     line-height: 1.81em;
@@ -19,7 +19,6 @@
     text-transform: uppercase;
     cursor: pointer;
     padding: 6px 0 6px 10px;
-
     color: #1b1b1b;
     border: 0;
   }

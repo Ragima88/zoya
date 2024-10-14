@@ -1,4 +1,9 @@
 @import "../../styles/mixins";
 .root-page {
   @include flex(column, center, center);
+  flex: 1;
+}
+main {
+  display: flex;
+  flex: 1;
 }

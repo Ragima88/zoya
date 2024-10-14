@@ -49,70 +49,73 @@ const Header = () => {
       </Section>
       <Section className={"header-bottom"}>
         <Search />
-        <Image className={"header-logo"} src={logo} />
+        <Link to={"/"}>
+          <Image className={"header-logo"} src={logo} />
+        </Link>
+
         <div className="header-bottom-icons">
-          <Link
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://www.linkedin.com/company/qode-themes?_ga=2.251954831.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={linkedin} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://x.com/QodeInteractive?_ga=2.74637844.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={twitter} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://www.facebook.com/QodeInteractive?_ga=2.74637844.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={facebook} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://www.instagram.com/QodeInteractive/?_ga=2.74637844.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={instagram} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={"https://www.behance.net/qodeinteractive"}
+            href={"https://www.behance.net/qodeinteractive"}
           >
             <Image className={"header-bottom-icon-img"} src={behance} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://vimeo.com/?_ga=2.80014097.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={vimeo} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://www.pinterest.com/qodeinteractive/?_ga=2.80014097.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={pinterest} />
-          </Link>
-          <Link
+          </a>
+          <a
             className={"header-bottom-icon"}
-            to={
+            href={
               "https://www.snapchat.com/?_ga=2.21342653.764714972.1727255640-1795553505.1726679370"
             }
           >
             <Image className={"header-bottom-icon-img"} src={snapchat} />
-          </Link>
+          </a>
         </div>
       </Section>
     </header>

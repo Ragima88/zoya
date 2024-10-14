@@ -17,13 +17,12 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  height: 100%;
   color: $textColor;
 }
 
 #root {
   @include flex(column, center, flex-start);
-  height: 100%;
+  min-height: 100vh;
 }
 .line {
   background-color: #eee;

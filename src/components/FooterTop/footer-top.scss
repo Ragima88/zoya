@@ -1,0 +1,67 @@
+@import "../../styles/mixins";
+.footer-top {
+  padding: 10px;
+  position: relative;
+  &::after {
+    content: "Follow us on instagram";
+    position: absolute;
+    color: #cfac9f;
+    z-index: 10;
+    line-height: 2em;
+    padding: 10px 20px;
+    background-color: #fff;
+    font-family: Montserrat;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  }
+  @include flex(row, center, center);
+  .footer-img-item {
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    &:last-child {
+      margin-right: 0;
+    }
+    .footer-img {
+      width: 100%;
+
+      img {
+        width: 100%;
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0);
+      transition: all 0.3s;
+    }
+    &:hover::after {
+      background: rgba(0, 0, 0, 0.15);
+    }
+    &::before {
+      content: "";
+      background-image: url("/src/assets/icons/instagram.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      width: 17px;
+      height: 17px;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.3s;
+    }
+    &:hover::before {
+      top: 20px;
+      opacity: 1;
+    }
+  }
+}

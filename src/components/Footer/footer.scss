@@ -1,0 +1,91 @@
+@import "../../styles/mixins";
+.footer-page {
+  @include flex(column, center, center);
+
+  .footer-top {
+  }
+  .footer-main {
+    background-color: #1b1b1b;
+    border-bottom: 1px solid rgba(233, 217, 206, 0.2);
+    &-in {
+      @include flex(row, center, center);
+      padding: 90px 0;
+      .footer-main-social {
+        margin-right: 30px;
+      }
+      .footer-main-social,
+      .footer-main-posts {
+        @include flex(column, center, center);
+        h2 {
+          font-family: "Cormorant Garamond";
+          color: #fff;
+          font-size: 24px;
+          font-weight: 500;
+          margin-bottom: 21px;
+        }
+        a {
+          font-family: Montserrat;
+          font-size: 11px;
+          line-height: 1.81em;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: #8f8f8f;
+          transition: color 0.2s ease-out;
+          cursor: pointer;
+          margin-bottom: 6px;
+          &:hover {
+            color: #fff;
+          }
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+      .footer-main-logo {
+        @include flex(column, center, center);
+        margin-right: 30px;
+        &-img {
+          width: 155px;
+          margin-bottom: 30px;
+          img {
+            width: 100%;
+          }
+        }
+        p {
+          font-family: "Cormorant Garamond";
+          color: #ababab;
+          font-size: 19px;
+          text-align: center;
+          margin-bottom: 35px;
+        }
+        input {
+          width: 293px;
+          color: #ababab;
+          font-family: "Cormorant Garamond";
+          background-color: rgba(255, 255, 255, 0.07);
+          border-color: transparent;
+          font-size: 17px;
+          line-height: 29px;
+          font-weight: 500;
+          border: 1px solid transparent;
+          cursor: pointer;
+          position: relative;
+          padding: 11.5px 20px;
+        }
+      }
+    }
+  }
+  .footer-bottom {
+    background-color: #1b1b1b;
+    &-in {
+      @include flex(column, center, center);
+      padding: 11px 0;
+      p {
+        font-family: "Cormorant Garamond";
+        color: #ababab;
+        font-size: 17px;
+      }
+    }
+  }
+}

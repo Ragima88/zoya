@@ -1,0 +1,76 @@
+@import "../../styles/mixins";
+aside {
+  @include flex(column, flex-end, flex-end);
+  padding-top: 79px;
+  margin-left: 50px;
+  .aside-author {
+    @include flex(column, center, center);
+    background-color: #faf9f7;
+    padding: 41px 35px 35px;
+    margin-bottom: 50px;
+    .author-img {
+      width: 157px;
+      margin-bottom: 15px;
+      img {
+        width: 100%;
+      }
+    }
+    h3 {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #cfac9f;
+      margin-bottom: 10px;
+    }
+    p {
+      width: 157px;
+      font-family: "Cormorant Garamond";
+      font-size: 19px;
+      line-height: 1.48em;
+      color: #616161;
+      text-align: center;
+    }
+  }
+  .categories {
+    @include flex(column, center, flex-end);
+    margin-bottom: 33px;
+    h2 {
+      font-family: "Cormorant Garamond";
+      color: #1b1b1b;
+      font-size: 33px;
+      line-height: 1.12em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: #1b1b1b;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .category {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #cfac9f;
+      margin-bottom: 15px;
+    }
+  }
+  .popular-posts {
+    @include flex(column, center, flex-end);
+    h2 {
+      font-family: "Cormorant Garamond";
+      color: #1b1b1b;
+      font-size: 33px;
+      line-height: 1.12em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      color: #1b1b1b;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  }
+}
