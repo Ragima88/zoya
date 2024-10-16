@@ -4,6 +4,7 @@ import Image from "../Image/Image";
 import author from "../../assets/images/author.png";
 import PopularPosts from "../PopularPosts/PopularPosts";
 import Subscribe from "../Subscribe/Subscribe";
+import Tags from "../Tags/Tags";
 const Aside = () => {
   return (
     <aside>
@@ -41,11 +42,10 @@ const Aside = () => {
           Travel
         </Link>
       </div>
-      <div className="popular-posts-title">
-        <h2>Popular Posts</h2>
-        <PopularPosts />
-        <Subscribe />
-      </div>
+
+      <PopularPosts />
+      <Subscribe />
+      <Tags />
     </aside>
   );
 };

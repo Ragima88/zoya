@@ -27,11 +27,14 @@ const PopularPosts = () => {
   ];
   return (
     <div className="popular-posts">
-      {posts.map((i) => {
-        return (
-          <PopularPost key={i.id} src={i.src} date={i.date} title={i.title} />
-        );
-      })}
+      <h2>Popular Posts</h2>
+      <div className="popular-posts-div">
+        {posts.map((i) => {
+          return (
+            <PopularPost key={i.id} src={i.src} date={i.date} title={i.title} />
+          );
+        })}
+      </div>
     </div>
   );
 };
