@@ -30,7 +30,7 @@
           cursor: pointer;
           transition: color 0.3 ease-out;
           &:hover {
-            color: #666666;
+            color: #ccc;
           }
         }
       }
@@ -81,7 +81,7 @@
           cursor: pointer;
           transition: color 0.2s ease-out;
           &:hover {
-            color: #666666;
+            color: #666;
           }
           &:last-child {
             margin-right: 0;

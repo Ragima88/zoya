@@ -4,7 +4,7 @@
   &-in {
     @include flex(row, flex-start, flex-start);
     .blog-inner {
-      @include flex(column, flex-start, flex-start);
+      @include flex(column, center, flex-start);
       padding: 76px 0 121px;
     }
   }

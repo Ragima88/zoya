@@ -4,6 +4,7 @@ import Image from "../Image/Image";
 import footerLogo from "../../assets/images/footer-logo.png";
 import { Link } from "react-router-dom";
 import FooterTop from "../FooterTop/FooterTop";
+import SubscribeInput from "../SubscribeInput/SubscribeInput";
 const Footer = () => {
   return (
     <footer className={"footer-page"}>
@@ -51,7 +52,7 @@ const Footer = () => {
             The perfect place for telling & sharing all the stories that truly
             matter.
           </p>
-          <input type="email" placeholder="Subscribe..." />
+          <SubscribeInput className={"subscribe-input black"} />
         </div>
         <div className="footer-main-posts">
           <h2>Posts</h2>

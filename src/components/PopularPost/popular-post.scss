@@ -1,0 +1,48 @@
+@import "../../styles/mixins";
+.popular-post {
+  @include flex(column, center, center);
+  margin-bottom: 40px;
+  &-img-link {
+    width: 100%;
+    overflow: hidden;
+    .popular-post-img {
+      width: 100%;
+      margin-bottom: 20px;
+      cursor: pointer;
+      img {
+        width: 100%;
+      }
+      transition: all 0.3s ease;
+    }
+    &:hover {
+      .popular-post-img {
+        transform: scale(1.05);
+      }
+    }
+  }
+  &-date {
+    color: #cfac9f;
+    font-family: Montserrat;
+    font-size: 11px;
+    line-height: 1.81em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+    margin-bottom: 1px;
+    &:hover {
+      color: #a6796f;
+    }
+  }
+  &-title {
+    font-family: "Cormorant Garamond";
+    font-size: 24px;
+    color: #1b1b1b;
+    text-align: center;
+    line-height: 1.16em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    cursor: pointer;
+  }
+}

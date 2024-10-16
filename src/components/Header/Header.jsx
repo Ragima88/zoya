@@ -2,7 +2,7 @@ import Section from "../Section/Section";
 import Image from "../Image/Image";
 import Search from "../Search/Search";
 import logo from "../../assets/images/logo-header.png";
-import IconLetter from "../../assets/icons/IconLetter";
+import iconLetter from "../../assets/icons/icon-letter.png";
 import IconBag from "../../assets/icons/IconBag";
 import linkedin from "../../assets/icons/icon-linkedin.svg";
 import twitter from "../../assets/icons/icon-twitter.svg";
@@ -31,7 +31,7 @@ const Header = () => {
           Lifestyle and Fashion Blog Theme for Everyone!
         </div>
         <div className="header-top-link-div">
-          <Image className={"header-top-link-icon"} svg={<IconLetter />} />
+          <Image className={"header-top-link-icon"} src={iconLetter} />
           <Link
             className="header-top-link"
             to={"mailto:zoya@qodeinteractive.com"}

@@ -1,0 +1,32 @@
+@import "../../styles/mixins";
+.subscribe {
+  @include flex(column, center, center);
+  padding: 35px 25px 25px;
+  position: relative;
+  background-color: #faf9f7;
+  margin-bottom: 35px;
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: #eee6e2;
+    width: 1px;
+    height: 55px;
+    top: -30px;
+    left: 50%;
+  }
+  h2 {
+    font-family: "Cormorant Garamond";
+    color: #1b1b1b;
+    font-size: 33px;
+    line-height: 1.12em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 9px;
+  }
+  p {
+    font-family: "Cormorant Garamond";
+    margin-bottom: 16px;
+    font-size: 17px;
+    line-height: 1.71em;
+  }
+}

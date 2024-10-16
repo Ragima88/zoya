@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 import "./aside.scss";
 import Image from "../Image/Image";
 import author from "../../assets/images/author.png";
+import PopularPosts from "../PopularPosts/PopularPosts";
+import Subscribe from "../Subscribe/Subscribe";
 const Aside = () => {
   return (
     <aside>
@@ -39,11 +41,10 @@ const Aside = () => {
           Travel
         </Link>
       </div>
-      <div className="popular-posts">
+      <div className="popular-posts-title">
         <h2>Popular Posts</h2>
-        <Link to={""}>
-          <Image />
-        </Link>
+        <PopularPosts />
+        <Subscribe />
       </div>
     </aside>
   );

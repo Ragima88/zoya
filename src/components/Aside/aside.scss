@@ -8,6 +8,17 @@ aside {
     background-color: #faf9f7;
     padding: 41px 35px 35px;
     margin-bottom: 50px;
+    position: relative;
+    &::before {
+      content: "";
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      width: 1px;
+      height: 55px;
+      display: block;
+      background-color: #eee6e2;
+    }
     .author-img {
       width: 157px;
       margin-bottom: 15px;
@@ -57,9 +68,13 @@ aside {
       text-transform: uppercase;
       color: #cfac9f;
       margin-bottom: 15px;
+      transition: color 0.3s;
+      &:hover {
+        color: #a6796f;
+      }
     }
   }
-  .popular-posts {
+  .popular-posts-title {
     @include flex(column, center, flex-end);
     h2 {
       font-family: "Cormorant Garamond";
@@ -70,7 +85,7 @@ aside {
       letter-spacing: 0.01em;
       color: #1b1b1b;
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 21px;
     }
   }
 }

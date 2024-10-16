@@ -1,12 +1,14 @@
 @import "../../styles/mixins";
 
-.inspiration-blog {
-  @include flex(column, center, flex-start);
-  padding-left: 35px;
-  .inspiration {
+.blog-in {
+  @include flex(column, center, center);
+
+  margin-bottom: 70px;
+  .blog-name-div {
     @include flex(row, center, center, auto);
     position: relative;
     margin-bottom: 5px;
+    text-align: center;
     &::before,
     &::after {
       content: "";
@@ -16,7 +18,7 @@
       display: block;
       background-color: #eee6e2;
     }
-    &-name {
+    .blog-name {
       font-family: Montserrat;
       font-size: 11px;
       line-height: 1.81em;
@@ -25,9 +27,13 @@
       text-transform: uppercase;
       color: #cfac9f;
       text-align: center;
+      transition: color 0.3s;
+      &:hover {
+        color: #b99486;
+      }
     }
   }
-  .inspiration-title {
+  .blog-title {
     font-family: "Cormorant Garamond";
     font-size: 53px;
     line-height: 1.08em;
@@ -36,10 +42,10 @@
     text-align: center;
     margin-bottom: 15px;
   }
-  .inspiration-desc {
+  .blog-desc {
     @include flex(row, center, center);
     margin-bottom: 40px;
-    .inspiration-date {
+    .blog-date {
       font-family: Montserrat;
       font-size: 11px;
       line-height: 1.81em;
@@ -48,6 +54,10 @@
       text-transform: uppercase;
       color: #ababab;
       margin-right: 10px;
+      transition: color 0.3s;
+      &:hover {
+        color: #a6796f;
+      }
     }
     div {
       width: 1px;
@@ -55,7 +65,7 @@
       background-color: #eee6e2;
       margin-right: 10px;
     }
-    .inspiration-author {
+    .blog-author {
       font-family: Montserrat;
       font-size: 11px;
       line-height: 1.81em;
@@ -63,16 +73,20 @@
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #ababab;
+      transition: color 0.3s;
+      &:hover {
+        color: #a6796f;
+      }
     }
   }
-  .inspiration-img {
+  .blog-img {
     width: 805px;
     margin-bottom: 30px;
     img {
       width: 100%;
     }
   }
-  .inspiration-content {
+  .blog-content {
     font-family: "Cormorant Garamond";
     font-size: 19px;
     line-height: 1.48em;
