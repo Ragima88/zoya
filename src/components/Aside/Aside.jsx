@@ -5,6 +5,8 @@ import author from "../../assets/images/author.png";
 import PopularPosts from "../PopularPosts/PopularPosts";
 import Subscribe from "../Subscribe/Subscribe";
 import Tags from "../Tags/Tags";
+import asideImg from "../../assets/images/aside-img.jpg";
+import Categories from "../Categories/Categories";
 const Aside = () => {
   return (
     <aside>
@@ -18,34 +20,13 @@ const Aside = () => {
           ideas…
         </p>
       </div>
-      <div className="categories">
-        <h2>Categories</h2>
-        <Link className="category" to={""}>
-          Beauty
-        </Link>
-        <Link className="category" to={""}>
-          Entertainment
-        </Link>
-        <Link className="category" to={""}>
-          Home Decor
-        </Link>
-        <Link className="category" to={""}>
-          Inspiration
-        </Link>
-        <Link className="category" to={""}>
-          Interior
-        </Link>
-        <Link className="category" to={""}>
-          Lifestyle
-        </Link>
-        <Link className="category" to={""}>
-          Travel
-        </Link>
-      </div>
-
+      <Categories title={"Categories"} />
       <PopularPosts />
       <Subscribe />
       <Tags />
+      <Image className={"aside-img"} src={asideImg} />
+      <Categories title={"Archive"} />
+      <Subscribe />
     </aside>
   );
 };
