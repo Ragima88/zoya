@@ -1,0 +1,13 @@
+@import "../../styles/mixins";
+.social-div {
+  @include flex(row, center, center);
+  .social-link {
+    .social-img {
+      width: 15px;
+      margin-right: 20px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

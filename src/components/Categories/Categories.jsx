@@ -123,7 +123,7 @@ const Categories = ({ title }) => {
             return <Category key={i.id} src={i.src} name={i.name} />;
           })
         : ""}
-      {title === "Category"
+      {title === "Categories"
         ? category.map((i) => {
             return <Category key={i.id} src={i.src} name={i.name} />;
           })

@@ -3,10 +3,11 @@ import "./aside.scss";
 import Image from "../Image/Image";
 import author from "../../assets/images/author.png";
 import PopularPosts from "../PopularPosts/PopularPosts";
-import Subscribe from "../Subscribe/Subscribe";
 import Tags from "../Tags/Tags";
 import asideImg from "../../assets/images/aside-img.jpg";
 import Categories from "../Categories/Categories";
+import MiniBox from "../MiniBox/MiniBox";
+
 const Aside = () => {
   return (
     <aside>
@@ -22,11 +23,19 @@ const Aside = () => {
       </div>
       <Categories title={"Categories"} />
       <PopularPosts />
-      <Subscribe />
+      <MiniBox
+        title={"Subscribe to Newsletter"}
+        desc={"Receive news via email"}
+        type={"subscribe"}
+      />
       <Tags />
       <Image className={"aside-img"} src={asideImg} />
       <Categories title={"Archive"} />
-      <Subscribe />
+      <MiniBox
+        title={"Follow Us"}
+        desc={"Follow us on Social Network"}
+        type={"social"}
+      />
     </aside>
   );
 };
