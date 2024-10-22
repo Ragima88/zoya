@@ -3,7 +3,7 @@
 .blog-in {
   @include flex(column, center, center);
 
-  margin-bottom: 70px;
+  margin-bottom: 40px;
   .blog-name-div {
     @include flex(row, center, center, auto);
     position: relative;
@@ -92,7 +92,6 @@
     line-height: 1.48em;
     color: #616161;
     font-weight: 400;
-    margin-bottom: 50px;
   }
   .button-div {
     @include flex(row, center, space-between);

@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+.author-div {
+  @include flex(row, center, center);
+  padding: 50px;
+  background-color: #faf9f7;
+  &-img {
+    width: 140px;
+    flex: none;
+    margin-right: 30px;
+    img {
+      width: 100%;
+      border-radius: 50%;
+    }
+  }
+  &-content {
+    @include flex(column, flex-start, flex-start);
+    .author-div-title {
+      color: #cfac9f;
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: 1px;
+    }
+    .author-div-name {
+      font-family: "Cormorant Garamond";
+      color: #1b1b1b;
+      font-size: 24px;
+      line-height: 1.16em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 11px;
+    }
+    span {
+      font-family: "Cormorant Garamond";
+      font-size: 19px;
+      line-height: 1.48em;
+      font-weight: 400;
+      color: #616161;
+    }
+  }
+}

@@ -1,14 +1,13 @@
 const IconBag = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    xmlns:xlink="http://www.w3.org/1999/xlink"
     x="0px"
     y="0px"
     width="15.06px"
     height="19.13px"
     viewBox="4.47 1 15.06 19.13"
     enableBackground="new 4.47 1 15.06 19.13"
-    xml:space="preserve"
+    xmlSpace="preserve"
     stroke="#1b1b1b"
   >
     <path

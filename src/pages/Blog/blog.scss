@@ -6,6 +6,13 @@
     .blog-inner {
       @include flex(column, center, flex-start);
       padding: 76px 0 121px;
+      .blog-in-div {
+        @include flex(column, center, center);
+        margin-bottom: 100px;
+        .button-div {
+          @include flex(row, center, space-between);
+        }
+      }
     }
   }
 }

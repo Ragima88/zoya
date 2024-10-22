@@ -1,6 +1,17 @@
 @import "../../styles/mixins";
-.share-button {
-  @include flex(row, center, center, auto);
+.share-widget {
+  @include flex(row, center, flex-end, auto);
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 20px;
+  .share-button {
+    @include flex(row, center, flex-end, auto);
+    position: absolute;
+    right: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+  }
   .share-img {
     margin-right: 10px;
   }
@@ -12,5 +23,34 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #1b1b1b;
+  }
+  .social-div {
+    .social-link {
+      margin-right: 10px;
+      opacity: 0;
+      transition: all 1s ease;
+    }
+  }
+  &:hover {
+    .share-button {
+      opacity: 0;
+    }
+    .social-div {
+      .social-link {
+        opacity: 1;
+      }
+      .social-link:nth-child(1) {
+        transition: all 4s ease;
+      }
+      .social-link:nth-child(2) {
+        transition: all 3s ease;
+      }
+      .social-link:nth-child(3) {
+        transition: all 2s ease;
+      }
+      .social-link:nth-child(4) {
+        transition: all 1s ease;
+      }
+    }
   }
 }

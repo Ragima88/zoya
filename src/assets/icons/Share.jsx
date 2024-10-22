@@ -8,7 +8,7 @@ const Share = ({ className }) => {
       height="18.05px"
       viewBox="5.45 3.97 13.06 18.05"
       enableBackground="new 5.45 3.97 13.06 18.05"
-      xml:space="preserve"
+      xmlSpace="preserve"
     >
       <path
         fill="none"

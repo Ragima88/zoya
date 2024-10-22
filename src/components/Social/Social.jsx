@@ -6,7 +6,7 @@ import twitter from "../../assets/icons/icon-twitter.svg";
 import pinterest from "../../assets/icons/icon-pinterest.svg";
 import instagram from "../../assets/icons/icon-instagram.svg";
 import linkedin from "../../assets/icons/icon-linkedin.svg";
-const Social = () => {
+const Social = ({ share = false }) => {
   return (
     <div className="social-div">
       <Link
@@ -38,7 +38,7 @@ const Social = () => {
       </Link>
       <Link
         target="_blank"
-        className="social-link"
+        className={`social-link ${share && "hidden"}`}
         to={
           "https://www.instagram.com/QodeInteractive/?_ga=2.155224315.1343042352.1729063051-1795553505.1726679370"
         }

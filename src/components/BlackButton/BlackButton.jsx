@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./black-button.scss";
-const BlackButton = () => {
+const BlackButton = ({ name }) => {
   return (
     <Link className="black-button" to={""}>
-      Read More
+      {name}
     </Link>
   );
 };

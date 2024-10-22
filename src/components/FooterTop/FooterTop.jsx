@@ -57,7 +57,7 @@ const FooterTop = () => {
     <div className={"footer-top"}>
       {list.map((item) => {
         return (
-          <Link className="footer-img-item" to={item.to}>
+          <Link key={item.id} className="footer-img-item" to={item.to}>
             <Image className={"footer-img"} src={item.image} />
           </Link>
         );
