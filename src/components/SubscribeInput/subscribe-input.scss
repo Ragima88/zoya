@@ -9,7 +9,6 @@
   &::before {
     content: "";
     position: absolute;
-    background-image: url("/src/assets/icons/icon-subscribe.svg");
     background-repeat: no-repeat;
     width: 20px;
     height: 20px;
@@ -19,6 +18,14 @@
     svg {
       width: 100%;
     }
+  }
+  &.email::before {
+    background-image: url("/src/assets/icons/icon-subscribe.svg");
+  }
+
+  &.search::before {
+    background-image: url("/src/assets/icons/icon-search-gray.svg");
+    opacity: 0.5;
   }
   input {
     width: 100%;

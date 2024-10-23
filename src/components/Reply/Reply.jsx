@@ -30,7 +30,7 @@ const Reply = () => {
       <input id="url" name="url" placeholder="Website" type="text" />
       <div className="checkbox-div">
         <input id="checkbox" name="checkbox" type="checkbox" />
-        <label for="checkbox">
+        <label htmlFor="checkbox">
           Save my name, email, and website in this browser for the next time I
           comment.
         </label>

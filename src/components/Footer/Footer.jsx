@@ -52,7 +52,11 @@ const Footer = () => {
             The perfect place for telling & sharing all the stories that truly
             matter.
           </p>
-          <SubscribeInput className={"subscribe-input black"} />
+          <SubscribeInput
+            className={"black"}
+            placeholder={"Subscribe..."}
+            variant={"email"}
+          />
         </div>
         <div className="footer-main-posts">
           <h2>Posts</h2>

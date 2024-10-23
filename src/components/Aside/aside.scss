@@ -1,8 +1,8 @@
 @import "../../styles/mixins";
-aside {
+.aside {
   @include flex(column, flex-end, flex-end);
-  padding-top: 79px;
   margin-left: 50px;
+  max-width: 342px;
   .aside-author {
     @include flex(column, center, center);
     background-color: #faf9f7;

@@ -1,0 +1,78 @@
+@import "../../styles/mixins";
+.listing-item {
+  @include flex(column, center, center);
+  overflow: hidden;
+  margin-bottom: 50px;
+  &-pic {
+    width: 100%;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    img {
+      width: 100%;
+    }
+  }
+  &:hover {
+    .listing-item-pic {
+      transform: scale(1.05);
+    }
+  }
+  &-name {
+    color: #cfac9f;
+    font-family: Montserrat;
+    font-size: 11px;
+    line-height: 1.81em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    position: relative;
+    margin-bottom: 4px;
+    &::before {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      top: 9px;
+      left: -48px;
+      background-color: #eee6e2;
+      margin-right: 20px;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 30px;
+      height: 1px;
+      top: 9px;
+      right: -66px;
+      background-color: #eee6e2;
+      margin-right: 20px;
+    }
+  }
+  &-title {
+    font-family: "Cormorant Garamond";
+    color: #1b1b1b;
+    font-size: 33px;
+    line-height: 1.12em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  &-date {
+    font-family: Montserrat;
+    font-size: 11px;
+    line-height: 1.81em;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #ababab;
+  }
+}
+@media (min-width: 1024px) {
+  .listing-item {
+    max-width: Calc(50% - 16px);
+    margin-right: 32px;
+    &:nth-child(2n) {
+      margin-right: 0;
+    }
+  }
+}

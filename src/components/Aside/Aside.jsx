@@ -10,7 +10,7 @@ import MiniBox from "../MiniBox/MiniBox";
 
 const Aside = () => {
   return (
-    <aside>
+    <aside className="aside">
       <div className="aside-author">
         <Link to={""}>
           <Image className={"author-img"} src={author} />
@@ -27,6 +27,8 @@ const Aside = () => {
         title={"Subscribe to Newsletter"}
         desc={"Receive news via email"}
         type={"subscribe"}
+        placeholder={"Subscribe..."}
+        variant={"email"}
       />
       <Tags />
       <Image className={"aside-img"} src={asideImg} />
@@ -35,6 +37,7 @@ const Aside = () => {
         title={"Follow Us"}
         desc={"Follow us on Social Network"}
         type={"social"}
+        variant={"email"}
       />
     </aside>
   );
