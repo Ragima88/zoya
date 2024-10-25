@@ -1,17 +1,13 @@
 @import "../../styles/mixins";
 .footer-page {
   @include flex(column, center, center);
-
-  .footer-top {
-  }
   .footer-main {
     background-color: #1b1b1b;
     border-bottom: 1px solid rgba(233, 217, 206, 0.2);
     &-in {
-      @include flex(row, center, center);
-      padding: 90px 0;
+      @include flex(column, center, center);
+      padding: 90px 15px;
       .footer-main-social {
-        margin-right: 30px;
       }
       .footer-main-social,
       .footer-main-posts {
@@ -32,19 +28,13 @@
           text-transform: uppercase;
           color: #8f8f8f;
           transition: color 0.2s ease-out;
-          cursor: pointer;
           margin-bottom: 6px;
-          &:hover {
-            color: #fff;
-          }
-          &:last-child {
-            margin-bottom: 0;
-          }
+          cursor: pointer;
         }
       }
       .footer-main-logo {
         @include flex(column, center, center);
-        margin-right: 30px;
+        padding: 61px 15px;
         &-img {
           width: 155px;
           margin-bottom: 30px;
@@ -71,6 +61,53 @@
         font-family: "Cormorant Garamond";
         color: #ababab;
         font-size: 17px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  .footer-page {
+    @include flex(column, center, center);
+    .footer-main {
+      &-in {
+        @include flex(row, center, center);
+        padding: 90px 0;
+        .footer-main-social {
+          margin-right: 30px;
+        }
+        .footer-main-social,
+        .footer-main-posts {
+          @include flex(column, center, center);
+
+          a {
+            transition: color 0.2s ease-out;
+            cursor: pointer;
+            margin-bottom: 6px;
+            &:hover {
+              color: #fff;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+        .footer-main-logo {
+          @include flex(column, center, center);
+          margin-right: 30px;
+          &-img {
+            width: 155px;
+            margin-bottom: 30px;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    .footer-bottom {
+      &-in {
+        @include flex(column, center, center);
+        padding: 11px 0;
       }
     }
   }

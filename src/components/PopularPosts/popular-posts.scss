@@ -1,6 +1,6 @@
 @import "../../styles/mixins";
 .popular-posts {
-  @include flex(column, center, flex-end);
+  @include flex(column, flex-start, flex-end);
   h2 {
     font-family: "Cormorant Garamond";
     color: #1b1b1b;
@@ -15,5 +15,10 @@
   .popular-posts-div {
     @include flex(column, center, center);
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .popular-posts {
+    @include flex(column, center, flex-end);
   }
 }

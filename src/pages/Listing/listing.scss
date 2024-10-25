@@ -1,10 +1,9 @@
 @import "../../styles/mixins";
 .title {
-  @include flex(column, center, flex-start);
   background-color: #faf9f7;
   &-in {
     @include flex(row, flex-start, flex-start);
-    padding: 40px 0;
+    padding: 40px 35px;
     span,
     .home-link {
       font-family: Montserrat;
@@ -30,18 +29,76 @@
   }
 }
 .listing {
-  @include flex(row, center, center);
+  @include flex(column, center, center);
   &-in {
-    @include flex(row, flex-start, space-between);
-    padding: 125px 0;
+    @include flex(column, center, center);
+    padding: 125px 35px 70px;
     .listing-list {
-      @include flex(row, center, flex-start);
+      @include flex(row, flex-start, flex-start);
       flex-wrap: wrap;
     }
     .listing-aside {
-      @include flex(column, flex-end, flex-end);
+      @include flex(column, flex-start, flex-start);
       max-width: 342px;
-      margin-left: 50px;
+    }
+  }
+}
+@media (min-width: 680px) {
+  .listing {
+    &-in {
+      padding: 125px 35px;
+      .listing-aside {
+        @include flex(column, flex-end, flex-end);
+        max-width: 768px;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .title {
+    @include flex(column, center, flex-start);
+    background-color: #faf9f7;
+    &-in {
+      @include flex(row, flex-start, flex-start);
+      padding: 40px 0;
+      span,
+      .home-link {
+        font-family: Montserrat;
+        font-size: 11px;
+        line-height: 1.81em;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #757575;
+        margin-right: 15px;
+      }
+      .line-span {
+        position: relative;
+        &::after {
+          content: "";
+          height: 15px;
+          width: 1px;
+          position: absolute;
+          top: 4px;
+          background-color: #eee6e2;
+        }
+      }
+    }
+  }
+  .listing {
+    @include flex(row, center, center);
+    &-in {
+      @include flex(row, flex-start, space-between);
+      padding: 125px 0;
+      .listing-list {
+        @include flex(row, center, flex-start);
+        flex-wrap: wrap;
+      }
+      .listing-aside {
+        @include flex(column, flex-end, flex-end);
+        max-width: 342px;
+        margin-left: 50px;
+      }
     }
   }
 }

@@ -1,12 +1,12 @@
 @import "../../styles/mixins";
 .author-div {
-  @include flex(row, center, center);
-  padding: 50px;
+  @include flex(column, flex-start, center);
+  padding: 50px 25px;
   background-color: #faf9f7;
   &-img {
     width: 140px;
     flex: none;
-    margin-right: 30px;
+    margin-bottom: 30px;
     img {
       width: 100%;
       border-radius: 50%;
@@ -39,6 +39,14 @@
       line-height: 1.48em;
       font-weight: 400;
       color: #616161;
+    }
+  }
+}
+@media (min-width: 768px) {
+  .author-div {
+    @include flex(row, center, center);
+    &-img {
+      margin-right: 30px;
     }
   }
 }

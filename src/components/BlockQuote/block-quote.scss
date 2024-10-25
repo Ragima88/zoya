@@ -1,10 +1,11 @@
 @import "../../styles/mixins";
+
 .block-quote {
   @include flex(column, center, center);
   background-color: #faf9f7;
   text-align: center;
   position: relative;
-  padding: 60px;
+  padding: 30px;
   margin-bottom: 90px;
   &::before {
     content: "";
@@ -44,5 +45,10 @@
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: #cfac9f;
+  }
+}
+@media (min-width: 1024px) {
+  .block-quote {
+    padding: 60px;
   }
 }

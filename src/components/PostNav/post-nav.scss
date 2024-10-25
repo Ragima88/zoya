@@ -1,5 +1,6 @@
 @import "../../styles/mixins";
 .post-nav-title {
+  display: none;
   font-family: Montserrat;
   font-size: 11px;
   line-height: 1.81em;
@@ -10,10 +11,17 @@
   margin-bottom: 2px;
 }
 .post-nav-desc {
+  display: none;
   font-family: "Cormorant Garamond";
   font-size: 24px;
   line-height: 1.16em;
   font-weight: 500;
   letter-spacing: 0.01em;
   color: #1b1b1b;
+}
+@media (min-width: 768px) {
+  .post-nav-title,
+  .post-nav-desc {
+    display: flex;
+  }
 }

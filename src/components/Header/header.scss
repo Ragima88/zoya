@@ -1,93 +1,129 @@
 @import "../../styles/mixins";
-.header {
-  @include flex(column, center, center);
-  &-top {
-    background-color: black;
-    &-in {
-      @include flex(row, center, space-between);
-      .header-top-title {
-        width: 100%;
-        font-family: "Cormorant Garamond";
-        font-size: 17px;
-        line-height: 29px;
-        color: #efefef;
-      }
-      .header-top-link-div {
-        @include flex(row, center, flex-end);
-        .header-top-link-icon {
-          width: 15px;
-          height: 19px;
-          margin-right: 10px;
-          img {
-            width: 100%;
-          }
-        }
-        .header-top-link {
-          font-family: "Cormorant Garamond";
-          font-size: 17px;
-          line-height: 29px;
-          color: #efefef;
-          cursor: pointer;
-          transition: color 0.3 ease-out;
-          &:hover {
-            color: #ccc;
-          }
-        }
-      }
-    }
-  }
-  &-main {
-    @include flex(column, center, center);
-    border-bottom: 1px solid #eee6e2;
-    &-in {
-      @include flex(row, center, center);
 
-      .header-navigation {
-        @include flex(row, center, center);
-      }
-      .shopping-bag {
-        @include flex(row, center, flex-start, auto);
-        &-icon {
-          width: 24px;
-          height: 24px;
-          cursor: pointer;
-          img {
-            width: 100%;
-          }
-        }
-      }
-    }
-  }
-  &-bottom {
-    @include flex(column, center, center);
-    border-bottom: 1px solid #eee6e2;
-    &-in {
-      @include flex(row, center, space-between);
-      padding: 50px 0;
-      .header-logo {
-        width: 282px;
-        flex: none;
-        cursor: pointer;
+.header-mobile {
+  @include flex(column, center, center);
+  border-bottom: 1px solid #eee6e2;
+  &-in {
+    @include flex(row, center, space-between);
+    padding: 25px 35px;
+    .header-mobile-logo {
+      display: flex;
+      &-pic {
+        width: 75px;
         img {
           width: 100%;
         }
       }
-      .header-bottom-icons {
-        @include flex(row, center, flex-end);
+    }
+    .hamburger-menu {
+      display: flex;
+      &-pic {
+        width: 18px;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+.header {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .header-mobile {
+    display: none;
+  }
+  .header {
+    @include flex(column, center, center);
+    &-top {
+      display: flex;
+      background-color: black;
+      &-in {
+        @include flex(row, center, space-between);
+        .header-top-title {
+          width: 100%;
+          font-family: "Cormorant Garamond";
+          font-size: 17px;
+          line-height: 29px;
+          color: #efefef;
+        }
+        .header-top-link-div {
+          @include flex(row, center, flex-end);
+          .header-top-link-icon {
+            width: 15px;
+            height: 19px;
+            margin-right: 10px;
+            img {
+              width: 100%;
+            }
+          }
+          .header-top-link {
+            font-family: "Cormorant Garamond";
+            font-size: 17px;
+            line-height: 29px;
+            color: #efefef;
+            cursor: pointer;
+            transition: color 0.3 ease-out;
+            &:hover {
+              color: #ccc;
+            }
+          }
+        }
+      }
+    }
+    &-main {
+      @include flex(column, center, center);
+      border-bottom: 1px solid #eee6e2;
+      &-in {
+        @include flex(row, center, center);
 
-        .header-bottom-icon {
-          width: 15px;
-          margin-right: 5px;
+        .header-navigation {
+          @include flex(row, center, center);
+        }
+        .shopping-bag {
+          @include flex(row, center, flex-start, auto);
+          &-icon {
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+    &-bottom {
+      @include flex(column, center, center);
+      border-bottom: 1px solid #eee6e2;
+      &-in {
+        @include flex(row, center, space-between);
+        padding: 50px 0;
+        .header-logo {
+          width: 282px;
+          flex: none;
           cursor: pointer;
-          transition: color 0.2s ease-out;
-          &:hover {
-            color: #666;
-          }
-          &:last-child {
-            margin-right: 0;
-          }
           img {
             width: 100%;
+          }
+        }
+        .header-bottom-icons {
+          @include flex(row, center, flex-end);
+
+          .header-bottom-icon {
+            width: 15px;
+            margin-right: 5px;
+            cursor: pointer;
+            transition: color 0.2s ease-out;
+            &:hover {
+              color: #666;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+            img {
+              width: 100%;
+            }
           }
         }
       }

@@ -1,6 +1,6 @@
 @import "../../styles/mixins";
 .categories {
-  @include flex(column, center, flex-end);
+  @include flex(column, flex-start, flex-end);
   margin-bottom: 40px;
   h2 {
     font-family: "Cormorant Garamond";
@@ -12,5 +12,10 @@
     color: #1b1b1b;
     text-align: center;
     margin-bottom: 20px;
+  }
+}
+@media (min-width: 1024px) {
+  .categories {
+    @include flex(column, center, flex-end);
   }
 }

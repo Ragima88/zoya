@@ -1,6 +1,6 @@
 @import "../../styles/mixins";
 .tags-div {
-  @include flex(column, center, center);
+  @include flex(column, flex-start, center);
   padding: 0 20px;
   margin-bottom: 50px;
   h2 {
@@ -14,7 +14,15 @@
     margin-bottom: 21px;
   }
   .tags {
-    @include flex(row, center, center);
+    @include flex(row, center, flex-start);
     flex-wrap: wrap;
+  }
+}
+@media (min-width: 1024px) {
+  .tags-div {
+    @include flex(column, center, center);
+    .tags {
+      @include flex(row, center, center);
+    }
   }
 }

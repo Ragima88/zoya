@@ -1,12 +1,12 @@
 @import "../../styles/mixins";
 .comments-item {
-  @include flex(row, flex-start, flex-start);
+  @include flex(column, flex-start, flex-start);
   margin-bottom: 50px;
   .comments-img {
     width: 90px;
     height: 90px;
     flex: none;
-    margin-right: 32px;
+    margin-bottom: 20px;
     img {
       width: 100%;
       height: 100%;
@@ -66,7 +66,77 @@
       color: #616161;
     }
   }
-  &:last-child {
-    padding-left: 125px;
+}
+@media (min-width: 1024px) {
+  .comments-item {
+    @include flex(row, flex-start, flex-start);
+    margin-bottom: 50px;
+    .comments-img {
+      width: 90px;
+      height: 90px;
+      flex: none;
+      margin-right: 32px;
+      img {
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+      }
+    }
+    .comments-content {
+      @include flex(column, flex-start, flex-start);
+      &-top {
+        @include flex(row, flex-start, space-between);
+        .comments-date {
+          font-family: Montserrat;
+          font-size: 11px;
+          line-height: 1.81em;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: #cfac9f;
+          transition: color 0.2s ease-out;
+          cursor: pointer;
+          margin-bottom: 4px;
+        }
+        .reply-btn {
+          position: relative;
+          font-family: Montserrat;
+          font-size: 11px;
+          line-height: 1.81em;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          &:after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            bottom: -5px;
+            left: -10px;
+            width: calc(100% + 20px);
+            background-color: #1b1b1b;
+          }
+        }
+      }
+
+      .comments-name {
+        font-family: "Cormorant Garamond";
+        color: #1b1b1b;
+        font-size: 24px;
+        line-height: 1.16em;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        margin-bottom: 10px;
+      }
+      .comments-comment {
+        font-family: "Cormorant Garamond";
+        font-size: 19px;
+        line-height: 1.48em;
+        font-weight: 400;
+        color: #616161;
+      }
+    }
+    &:last-child {
+      padding-left: 125px;
+    }
   }
 }
