@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./nav.scss";
 
-const Nav = ({ items }) => {
+const Nav = ({ className, items }) => {
   const sortedItems = [...items].sort((a, b) => a.order - b.order);
   const elements = sortedItems.map((item) => {
     return (
@@ -11,6 +11,6 @@ const Nav = ({ items }) => {
     );
   });
 
-  return <nav className={"navigation"}>{elements}</nav>;
+  return <nav className={`navigation ${className}`}>{elements}</nav>;
 };
 export default Nav;

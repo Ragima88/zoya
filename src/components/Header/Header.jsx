@@ -16,25 +16,39 @@ import { Link } from "react-router-dom";
 import Nav from "../Nav/Nav";
 import "./header.scss";
 import mobileLogo from "../../assets/images/logo-header.png";
-import hamburger from "../../assets/icons/hamburger.jpeg";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Hamburger from "../Hamburger/Hamburger";
+import Container from "../Container/Container";
+
 const Header = () => {
-  const items = [
-    { name: "Landing", href: "/landing", order: 5 },
-    { name: "Pages", href: "/pages", order: 2 },
-    { name: "Shop", href: "/shop", order: 4 },
-    { name: "Blog", href: "/blog", order: 3 },
-    { name: "Home", href: "/home", order: 1 },
-  ];
+  const [menu, setMenu] = useState([]);
+  const [isOpen, setOpen] = useState(false);
+  const fetchData = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:3000/nav-menu");
+      console.log("Fetched data:", data);
+      setMenu(data);
+      return data;
+    } catch (error) {
+      console.error("Axios error:", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <>
-      {" "}
+      <Container>
+        <Nav className={`mobile-nav ${isOpen ? "open" : ""}`} items={menu} />
+      </Container>
+
       <Section className={"header-mobile"}>
         <Link to={""} className="header-mobile-logo">
           <Image className="header-mobile-logo-pic" src={mobileLogo} />
         </Link>
-        <Link to={""} className={"hamburger-menu"}>
-          <Image className={"hamburger-menu-pic"} src={hamburger} />
-        </Link>
+        <Hamburger menu={menu} isOpen={isOpen} setOpen={setOpen} />
       </Section>
       <header className={"header"}>
         <Section className={"header-top"}>
@@ -52,7 +66,7 @@ const Header = () => {
           </div>
         </Section>
         <Section className={"header-main"}>
-          <Nav className="header-navigation" items={items} />
+          <Nav items={menu} />
           <Link className="shopping-bag" to={""}>
             <Image className="shopping-bag-icon" svg={<IconBag />} />
             <span>(0)</span>

@@ -2,7 +2,7 @@
 .single-blog {
   &-in {
     @include flex(column, flex-start, center);
-    padding: 120px 35px;
+    padding: 220px 35px 120px;
     .single-blog-div {
       @include flex(column, center, center);
 

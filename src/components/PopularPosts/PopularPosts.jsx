@@ -1,30 +1,23 @@
 import "./popular-posts.scss";
-import popularPostImg1 from "../../assets/images/popular-post-img1.jpg";
-import popularPostImg2 from "../../assets/images/popular-post-img2.jpg";
-import popularPostImg3 from "../../assets/images/popular-post-img3.jpg";
 import PopularPost from "../PopularPost/PopularPost";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const PopularPosts = () => {
-  const posts = [
-    {
-      id: 1,
-      src: popularPostImg1,
-      date: "February 1, 2021",
-      title: "Earrings girls love to wear all the time",
-    },
-    {
-      id: 2,
-      src: popularPostImg2,
-      date: "January 14, 2021",
-      title: "Trends we are loving this spring",
-    },
-    {
-      id: 3,
-      src: popularPostImg3,
-      date: "December 1, 2020",
-      title: "Ten amazing tips for a beautiful smile",
-    },
-  ];
+  const [posts, setPosts] = useState([]);
+  const fetchData = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:3000/popular-posts");
+      console.log("Fetched data:", data);
+      setPosts(data);
+      return data;
+    } catch (error) {
+      console.error("Axios error:", error);
+    }
+  };
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div className="popular-posts">
       <h2>Popular Posts</h2>

@@ -3,7 +3,7 @@
   @include flex(column, center, center);
   &-in {
     @include flex(column, center, flex-start);
-    padding: 100px 35px;
+    padding: 220px 35px 120px;
     .blog-inner {
       @include flex(column, center, flex-start);
 

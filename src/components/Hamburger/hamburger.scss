@@ -1,0 +1,24 @@
+.hamburger-div {
+  .hamburger-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .hamburger-pic {
+      width: 18px;
+      img {
+        width: 100%;
+      }
+    }
+
+    .hamburger-close {
+      &-pic {
+        width: 20px;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
