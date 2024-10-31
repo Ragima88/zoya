@@ -2,10 +2,10 @@ import "./blog-in.scss";
 import Image from "../../components/Image/Image";
 import { Link } from "react-router-dom";
 
-const BlogIn = ({ name, title, date, author, src, content }) => {
+const BlogIn = ({ className, name, title, date, author, src, content }) => {
   return (
     <>
-      <div className="blog-in">
+      <div className={`blog-in ${className}`}>
         <div className="blog-name-div">
           <Link className="blog-name" to={""}>
             {name}

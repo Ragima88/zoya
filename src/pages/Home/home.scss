@@ -1,4 +1,7 @@
 @import "../../styles/mixins";
+.home-page {
+  overflow-x: hidden;
+}
 .blog-section {
   @include flex(column, center, center);
   &-in {

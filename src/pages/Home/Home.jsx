@@ -30,6 +30,7 @@ const blogPostsImages = [
 const Home = () => {
   const [blogPosts, setBlogPosts] = useState([]);
   const [quotes, setQuotes] = useState([]);
+  const [slider, setSlider] = useState([]);
 
   const fetchData = async () => {
     try {
@@ -51,6 +52,16 @@ const Home = () => {
       console.error("Axios error:", error);
     }
   };
+  const fetchData3 = async () => {
+    try {
+      const { data } = await axios.get("http://localhost:3000/slider");
+      console.log("Fetched data:", data);
+      setSlider(data);
+      return data;
+    } catch (error) {
+      console.error("Axios error:", error);
+    }
+  };
 
   useEffect(() => {
     fetchData();
@@ -58,10 +69,13 @@ const Home = () => {
   useEffect(() => {
     fetchData2();
   }, []);
+  useEffect(() => {
+    fetchData3();
+  }, []);
 
   return (
     <div className="home-page">
-      <Slider />
+      <Slider slider={slider} />
       <Section className={"blog-section"}>
         <div className="blog-inner">
           <BlogInWithButtons
