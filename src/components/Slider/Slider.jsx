@@ -30,13 +30,15 @@ const Slider = ({ slider }) => {
           <div className="slider-item">
             <Image src={item.src} />
             <div className="overlay"></div>
-            <BlogIn
-              className={"slider-blog"}
-              name={item.name}
-              title={item.title}
-              date={item.date}
-              author={item.author}
-            />
+            <div className="moving-text">
+              <BlogIn
+                className={"slider-blog"}
+                name={item.name}
+                title={item.title}
+                date={item.date}
+                author={item.author}
+              />
+            </div>
           </div>
         </SwiperSlide>
       ))}

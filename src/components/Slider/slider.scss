@@ -13,18 +13,33 @@
       height: 100%;
       background: linear-gradient(rgba(0, 0, 0, 0) 39%, rgba(0, 0, 0, 0.4) 61%);
     }
-    .slider-blog {
-      position: absolute;
-      bottom: 0;
-      margin: 0;
+    .moving-text {
+      position: relative;
+      animation: moveUp 1s ease-out forwards;
+      opacity: 0;
+      .slider-blog {
+        position: absolute;
+        bottom: 0;
+        margin: 0;
 
-      .blog-name,
-      .blog-title,
-      .blog-date,
-      .blog-author {
-        color: white;
+        .blog-name,
+        .blog-title,
+        .blog-date,
+        .blog-author {
+          color: white;
+        }
       }
     }
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translateY(10cm); /* Mətni 10 sm aşağıda başlayır */
+    opacity: 0; /* Şəffaflıq - tam gizlidir */
+  }
+  100% {
+    transform: translateY(0); /* Son mövqeyində dayanır */
+    opacity: 1; /* Tam görünən vəziyyətə gətirir */
   }
 }
 

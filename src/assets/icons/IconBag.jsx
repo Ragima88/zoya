@@ -1,4 +1,4 @@
-const IconBag = () => (
+const IconBag = ({ stroke = "#1b1b1b" }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     x="0px"
@@ -8,7 +8,7 @@ const IconBag = () => (
     viewBox="4.47 1 15.06 19.13"
     enableBackground="new 4.47 1 15.06 19.13"
     xmlSpace="preserve"
-    stroke="#1b1b1b"
+    stroke={stroke}
   >
     <path
       fill="none"

@@ -1,0 +1,19 @@
+@import "../../styles/mixins";
+.top-products {
+  @include flex(column, flex-start, flex-start);
+  margin-bottom: 40px;
+  h2 {
+    font-family: "Cormorant Garamond";
+    color: #1b1b1b;
+    font-size: 33px;
+    line-height: 1.12em;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    margin-bottom: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .top-products {
+    align-items: center;
+  }
+}

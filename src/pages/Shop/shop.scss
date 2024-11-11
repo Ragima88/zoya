@@ -1,0 +1,95 @@
+@import "../../styles/mixins";
+.shop {
+  @include flex(column, center, center);
+  background-color: #faf9f7;
+  &-in {
+    @include flex(column, flex-start, flex-start);
+    padding: 160px 35px 65px;
+    .shop-article {
+      @include flex(column, flex-start, flex-start);
+      margin-bottom: 70px;
+      .shop-top {
+        @include flex(column, flex-start, flex-start);
+        p {
+          font-family: Montserrat;
+          font-size: 11px;
+          line-height: 1.81em;
+          font-weight: 500;
+          letter-spacing: 0.2em;
+          text-transform: uppercase;
+          color: #757575;
+          margin-bottom: 10px;
+        }
+        #select {
+          width: 100%;
+          padding: 12.5px 20px;
+          font-family: "Cormorant Garamond";
+          font-size: 16px;
+          line-height: 29px;
+          font-weight: 500;
+          color: grey;
+          background-color: transparent;
+          border: 1px solid #eee6e2;
+          cursor: pointer;
+          margin-bottom: 20px;
+        }
+      }
+      .shop-items {
+        @include flex(column, flex-start, flex-start);
+      }
+    }
+    .shop-aside {
+      @include flex(column, flex-start, flex-start);
+      .shop-search {
+        margin-bottom: 40px;
+        input {
+          border: 1px solid #eee6e2;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 480px) {
+  #select {
+    max-width: 250px;
+  }
+}
+@media (min-width: 680px) {
+  .shop-in .shop-article .shop-top {
+    @include flex(row, center, space-between);
+    margin-bottom: 18px;
+    #select {
+      margin-bottom: 0;
+    }
+  }
+  .shop-in .shop-article .shop-items {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: calc(100% + 30px);
+    flex-wrap: wrap;
+    margin-left: -15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .shop-aside {
+    max-width: 252px;
+    @include flex(column, flex-end, flex-end);
+    margin-left: 30px;
+    .shop-search {
+      input {
+        padding: 8.5px 20px;
+      }
+    }
+  }
+  .shop-in {
+    @include flex(row, flex-start, center);
+    padding: 125px 0 65px;
+    .shop-aside {
+      @include flex(column, center, center);
+    }
+  }
+}

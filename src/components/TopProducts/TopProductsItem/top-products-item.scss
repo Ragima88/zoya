@@ -1,0 +1,39 @@
+@import "../../../styles/mixins";
+.top-products-item {
+  @include flex(row, flex-start, flex-start);
+  margin-bottom: 20px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &-link {
+    margin-right: 20px;
+    &-pic {
+      width: 95px;
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &-content {
+    @include flex(column, flex-start, flex-start);
+    &-title {
+      font-family: "Cormorant Garamond";
+      color: #1b1b1b;
+      font-size: 24px;
+      line-height: 1.16em;
+      font-weight: 500;
+      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+    }
+    &-amount {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #ababab;
+      margin-bottom: 10px;
+    }
+  }
+}
