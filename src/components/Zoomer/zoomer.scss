@@ -1,0 +1,13 @@
+.zoomer {
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 608px;
+  img {
+    width: 100%;
+  }
+}
+@media (min-width: 680px) {
+  .zoomer {
+    width: calc(100% - 25.4%);
+  }
+}

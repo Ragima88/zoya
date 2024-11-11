@@ -1,0 +1,23 @@
+.gallery-item {
+  padding: 0 5px;
+  img {
+    width: 100%;
+  }
+}
+@media (min-width: 680px) {
+  .gallery-item {
+    margin-bottom: 10px;
+    img {
+      width: 100%;
+      max-width: 185px;
+    }
+  }
+}
+@media (min-width: 1440px) {
+  .gallery-item {
+    height: 143px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
