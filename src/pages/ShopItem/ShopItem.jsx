@@ -8,6 +8,7 @@ import AddToCart from "../../components/AddToCart/AddToCart";
 
 import "./shop-item.scss";
 import { Link } from "react-router-dom";
+import Counter from "../../components/Counter/Counter";
 const ShopItem = () => {
   const items = [
     { id: 1, src: galleryItemPic1 },
@@ -34,11 +35,7 @@ const ShopItem = () => {
             nobis constituam. Solet ullamcorper
           </p>
           <div className="adding-to-cart-div">
-            <div className="adding-to-cart-div-number">
-              <span>-</span>
-              <input type="text" placeholder="1" />
-              <span>+</span>
-            </div>
+            <Counter />
             <AddToCart
               hasIcon={false}
               style={{

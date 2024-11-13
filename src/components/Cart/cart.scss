@@ -1,0 +1,126 @@
+@import "../../styles/mixins";
+.cart-title {
+  background-color: #faf9f7;
+  margin-top: 70px;
+  &-in {
+    @include flex(row, flex-start, flex-start);
+    padding: 40px 35px;
+    span,
+    .home-link {
+      font-family: Montserrat;
+      font-size: 11px;
+      line-height: 1.81em;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: #757575;
+      margin-right: 15px;
+    }
+    .line-span {
+      position: relative;
+      &::after {
+        content: "";
+        height: 15px;
+        width: 1px;
+        position: absolute;
+        top: 4px;
+        background-color: #eee6e2;
+      }
+    }
+  }
+}
+.cart-content {
+  @include flex(column, center, center);
+  background-color: #faf9f7;
+  padding: 60px 35px 125px;
+  &-in {
+    @include flex(column, center, center);
+    .cart-content-titles {
+      @include flex(row, center, space-between);
+      border-bottom: 1px solid #eee6e2;
+      .close-up-div {
+        width: 25px;
+        flex: none;
+      }
+      .img-up-div {
+        width: 0;
+      }
+      &-name {
+        width: 25%;
+        color: #1b1b1b;
+        font-family: Montserrat;
+        font-size: 10px;
+        line-height: 1.81em;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        padding: 15px 0 15px 5px;
+        text-align: left;
+      }
+      .cart-content-title-1 {
+        text-align: left;
+      }
+    }
+    .cart-items-div {
+      @include flex(column, flex-start, flex-start);
+      margin-bottom: 80px;
+    }
+    .cart-totals-div {
+      @include flex(column, flex-start, flex-start);
+      .subtotal-div,
+      .total-div {
+        @include flex(row, center, flex-start);
+        border-bottom: 1px solid #eee6e2;
+      }
+      h2 {
+        font-family: "Cormorant Garamond";
+        color: #1b1b1b;
+        font-size: 42px;
+        line-height: 1.095em;
+        font-weight: 500;
+        margin: 0 0 22px;
+      }
+      p {
+        color: #1b1b1b;
+        font-family: Montserrat;
+        font-size: 11px;
+        line-height: 1.81em;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        width: 50%;
+        padding: 15px 0;
+      }
+      span {
+        font-family: Montserrat;
+        font-size: 11px;
+        line-height: 1.81em;
+        font-weight: 500;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: #ababab;
+      }
+    }
+  }
+}
+@media (min-width: 680px) {
+  .cart-content-in .cart-content-titles-name {
+    font-size: 11px;
+    width: 20%;
+  }
+  .cart-content .cart-content-in .cart-totals-div p {
+    width: 20%;
+  }
+  .cart-content-in .cart-content-titles {
+    .img-up-div {
+      display: flex;
+      width: 20%;
+      padding-left: 5px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .cart-title {
+    margin-top: 0;
+  }
+}
